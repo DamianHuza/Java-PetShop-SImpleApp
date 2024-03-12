@@ -1,0 +1,28 @@
+Project description
+
+My project is supposed to simulate an online shop designed for hamsters.
+It consists of 5 GUI forms created in swing ui.
+
+Registration form
+Has 4 mandatory fields (Username, Email, Password and Confirm password). The phone field is optional, 
+a user can register without entering it. On clicking "register", the phone(if exists) and email fields will be checked for 
+correct format, also the password fields must match. If all the data is correct a new line will be created in table "account".
+
+Login form
+Has 2 fields for username and password. It checks if the credentials entered exist in the "account table". If the account is not 
+found, an error message is displayed.
+
+Catalogue
+This serves as the main page. It displayes the current logged in user, a 'log out' button, which takes you back to the login form.
+It also shows a list of hamsters. For each type, it checks the available ammount in the database table "breed" and,
+if the number is greater than 0 it displays a text field for entering the quantity. When clicking the 'Place order' button,
+then final price will be calculated, the ammounts will be checked (must be numbers smaller than the available stock) and the "OrderAdressForm"
+will be displayed.
+
+OrderAdressForm
+It displays the price of an order and has 4 fields corresponding to the City, Street, Nr, Ap (last one is optional). After entering an adress,
+and clicking confirom order, a new entry will be added in table "orders" with all the relevant information (User, adress, price and content).
+
+AdminConsole
+If the logged in user is an admin, the Catalogue will also have an "Admin console" button, which leads to this form.
+Here, the admin can modify the stock for each hamster type(add or remove hamsters), or ban any non-admin account.
